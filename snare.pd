@@ -1,0 +1,42 @@
+#N canvas 374 147 1078 1113 12;
+#X obj 154 123 noise~;
+#X obj 154 194 *~ 0.5;
+#X obj 154 647 *~, f 4;
+#X obj 347 433 line;
+#X obj 347 114 bng 15 250 50 0 empty empty empty 17 7 0 10 #fcfcfc
+#000000 #000000;
+#X floatatom 347 478 5 0 0 0 - - - 0;
+#X obj 484 207 bng 15 250 50 0 empty empty empty 17 7 0 10 #fcfcfc
+#000000 #000000;
+#X obj 661 322 bng 15 250 50 0 empty empty empty 17 7 0 10 #fcfcfc
+#000000 #000000;
+#X obj 155 723 *~ 0.25;
+#X obj 154 791 dac~;
+#X msg 347 161 1 5;
+#X msg 484 275 0.5 100;
+#X msg 661 363 0 150;
+#X obj 484 159 delay 5;
+#X obj 661 280 delay 100;
+#X obj 155 314 hip~ 4000;
+#X text 475 520 Κάνοντας χρήση ενός high pass filter
+στα 4000Hz και της τεχνικής Envelope με πολύ
+μικρό attack \, decay \, release time μπορούμε να υλοποιήσουμε
+έναν ήχο που μας θυμίζει SNARE;
+#X connect 0 0 1 0;
+#X connect 1 0 15 0;
+#X connect 2 0 8 0;
+#X connect 3 0 5 0;
+#X connect 4 0 13 0;
+#X connect 4 0 10 0;
+#X connect 5 0 2 1;
+#X connect 6 0 14 0;
+#X connect 6 0 11 0;
+#X connect 7 0 12 0;
+#X connect 8 0 9 0;
+#X connect 8 0 9 1;
+#X connect 10 0 3 0;
+#X connect 11 0 3 0;
+#X connect 12 0 3 0;
+#X connect 13 0 6 0;
+#X connect 14 0 7 0;
+#X connect 15 0 2 0;

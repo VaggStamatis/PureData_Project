@@ -1,0 +1,56 @@
+#N canvas -7 -3 976 1083 12;
+#X obj 154 123 noise~;
+#X obj 154 194 *~ 0.5;
+#X obj 154 770 *~, f 4;
+#X obj 347 556 line;
+#X obj 347 114 bng 15 250 50 0 empty empty empty 17 7 0 10 #fcfcfc
+#000000 #000000;
+#X floatatom 347 601 5 0 0 0 - - - 0;
+#X msg 347 161 1 1000;
+#X obj 484 159 delay 1000;
+#X obj 484 207 bng 15 250 50 0 empty empty empty 17 7 0 10 #fcfcfc
+#000000 #000000;
+#X msg 484 275 0.5 1500;
+#X obj 661 322 bng 15 250 50 0 empty empty empty 17 7 0 10 #fcfcfc
+#000000 #000000;
+#X obj 661 280 delay 4500;
+#X msg 661 363 0 1000;
+#X obj 155 846 *~ 0.25;
+#X obj 154 914 dac~;
+#X text 542 576 Το παρόν σχήμα ονομάζεται Envelope
+(Φακελος ?) και περιγράφει την αλλαγή
+ενός ήχουν μέσα στον χρόνο.;
+#X text 542 630 Στο παράδειγμά μας έχουμε ένα
+ήχο που δημιουργείται από το αντικείμενο
+noise~ και στα δεξιά με το που πατήσουμε
+το κουμπί αυτός ο ήχος θα φτάσει μέσα
+σε 1000ms ή 1 sec στο 1 μετά από 1 sec (delay αντικείμενο)
+θα αρχίσει να πέφτει στο 0.5 σε διάστημα
+χρόνου 1.5 sec. Εκεί θα περιμένει για 3 δευτερόλεπτα
+και ύστερα μέσα σε 1 sec θα πέσει στο 0;
+#X text 540 763 Με αυτό τον τρόπο μπορούμε πλέον
+συνδιάζοντας και φίλτρα και την παραπάνω
+μέθοδο του Envelope να δημιουργήσουμε ήχους
+ενός Snare ή ενός Kick Drum (βλέπε παραδείγματα
+Snare.pd και KickDrum.pd);
+#X text 339 44 Attack;
+#X text 488 45 Decay;
+#X text 655 44 Sustain;
+#X text 829 362 Release;
+#X connect 0 0 1 0;
+#X connect 1 0 2 0;
+#X connect 2 0 13 0;
+#X connect 3 0 5 0;
+#X connect 4 0 6 0;
+#X connect 4 0 7 0;
+#X connect 5 0 2 1;
+#X connect 6 0 3 0;
+#X connect 7 0 8 0;
+#X connect 8 0 9 0;
+#X connect 8 0 11 0;
+#X connect 9 0 3 0;
+#X connect 10 0 12 0;
+#X connect 11 0 10 0;
+#X connect 12 0 3 0;
+#X connect 13 0 14 0;
+#X connect 13 0 14 1;
