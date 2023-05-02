@@ -1,0 +1,38 @@
+#N canvas 0 0 1600 1113 12;
+#X floatatom 63 98 5 0 0 0 - - - 0;
+#X floatatom 294 102 5 0 0 0 - - - 0;
+#X floatatom 530 103 5 0 0 0 - - - 0;
+#X obj 294 158 osc~;
+#X obj 295 233 *~;
+#X obj 63 333 +~;
+#X obj 64 380 osc~;
+#X obj 64 436 *~ 0.5;
+#X obj 64 514 dac~, f 5;
+#X text 286 3 FM Synt;
+#X text 29 44 Carrier Frequency;
+#X text 275 44 Modulator Frequency;
+#X text 502 47 Modulator Depth;
+#X text 93 332 <---- Πρόσθεση σημάτων συχνοτήτων
+;
+#X text 335 234 <---- Αύξηση του πλάτους του Διαμορφωτικού
+Ταλαντωτή (Modulating Ocsillator);
+#X text 91 158 Modulating Oscillator --->;
+#X text 102 380 <----CarrierOscillator;
+#X text 39 570 Fm Synth : One oscillator's frequency is affecting another
+oscillator's frequency Μετάφραση -> Η συχόντητα
+ενός ημιτονικού ταλαντωτή επηρεάζει
+την συχνότητα ενός άλλου ημιτονικού
+ταλαντωτή.;
+#X text 34 651 Πειραματιστείτε με τις τιμές
+των Carrier \, Modulatro freq και Modulator Depth για να
+δείτε τι αποτελέσματα επιφέρουν στον
+τελικό ήχο.;
+#X connect 0 0 5 0;
+#X connect 1 0 3 0;
+#X connect 2 0 4 1;
+#X connect 3 0 4 0;
+#X connect 4 0 5 1;
+#X connect 5 0 6 0;
+#X connect 6 0 7 0;
+#X connect 7 0 8 0;
+#X connect 7 0 8 1;
