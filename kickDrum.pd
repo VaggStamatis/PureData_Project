@@ -1,52 +1,55 @@
-#N canvas 0 -8 1600 1113 12;
-#X obj 213 236 noise~;
-#X obj 213 760 *~, f 4;
-#X obj 406 546 line;
-#X obj 406 122 bng 15 250 50 0 empty empty empty 17 7 0 10 #fcfcfc
+#N canvas 1600 0 1280 964 12;
+#X obj 140 145 noise~;
+#X obj 140 669 *~, f 4;
+#X obj 333 107 bng 15 250 50 0 empty empty empty 17 7 0 10 #fcfcfc
 #000000 #000000;
-#X floatatom 406 591 5 0 0 0 - - - 0;
-#X obj 543 320 bng 15 250 50 0 empty empty empty 17 7 0 10 #fcfcfc
+#X floatatom 333 500 5 0 0 0 - - - 0;
+#X obj 470 229 bng 15 250 50 0 empty empty empty 17 7 0 10 #fcfcfc
 #000000 #000000;
-#X obj 720 435 bng 15 250 50 0 empty empty empty 17 7 0 10 #fcfcfc
+#X obj 647 344 bng 15 250 50 0 empty empty empty 17 7 0 10 #fcfcfc
 #000000 #000000;
-#X obj 214 836 *~ 0.25;
-#X obj 213 904 dac~;
-#X msg 406 274 1 5;
-#X obj 543 272 delay 5;
-#X obj 213 307 *~ 1;
-#X obj 90 447 *~ 1;
-#X obj 212 395 bp~ 150 4;
-#X obj 212 451 *~ 20;
-#X obj 211 517 clip~ -0.9 0.9;
-#X msg 543 388 0.25 50;
-#X msg 720 476 0 300;
-#X obj 720 393 delay 50;
-#X obj 89 393 hip~ 8000;
-#X text 492 659 Κάνοντας χρήση ενός high pass filter
+#X obj 141 745 *~ 0.25;
+#X obj 140 813 dac~;
+#X msg 333 183 1 5;
+#X obj 140 216 *~ 1;
+#X obj 17 356 *~ 1;
+#X obj 139 304 bp~ 150 4;
+#X obj 139 360 *~ 20;
+#X obj 138 426 clip~ -0.9 0.9;
+#X msg 470 297 0.25 50;
+#X msg 647 385 0 300;
+#X obj 647 302 delay 50;
+#X obj 16 302 hip~ 8000;
+#X text 801 20 Κάνοντας χρήση ενός high pass filter
 στα 4000Hz \, ένα band filter και της τεχνικής
 Envelope με πολύ μικρό attack \, decay και ένα μεγαλύτερο
 relese time μπορούμε να φτιάξουμε ένα ήχο
 που θυμίζει kick drum.;
-#X connect 0 0 11 0;
-#X connect 1 0 7 0;
-#X connect 2 0 4 0;
-#X connect 3 0 10 0;
-#X connect 3 0 9 0;
-#X connect 4 0 1 1;
-#X connect 5 0 16 0;
-#X connect 5 0 18 0;
-#X connect 6 0 17 0;
-#X connect 7 0 8 0;
-#X connect 7 0 8 1;
-#X connect 9 0 2 0;
-#X connect 10 0 5 0;
-#X connect 11 0 13 0;
-#X connect 11 0 19 0;
-#X connect 12 0 1 0;
-#X connect 13 0 14 0;
-#X connect 14 0 15 0;
-#X connect 15 0 1 0;
-#X connect 16 0 2 0;
-#X connect 17 0 2 0;
-#X connect 18 0 6 0;
-#X connect 19 0 12 0;
+#X obj 333 455 line;
+#X obj 470 177 delay 5;
+#X obj 445 61 delay 1000;
+#X connect 0 0 9 0;
+#X connect 1 0 6 0;
+#X connect 2 0 8 0;
+#X connect 2 0 20 0;
+#X connect 2 0 21 0;
+#X connect 3 0 1 1;
+#X connect 4 0 16 0;
+#X connect 4 0 14 0;
+#X connect 5 0 15 0;
+#X connect 6 0 7 0;
+#X connect 6 0 7 1;
+#X connect 8 0 19 0;
+#X connect 9 0 11 0;
+#X connect 9 0 17 0;
+#X connect 10 0 1 0;
+#X connect 11 0 12 0;
+#X connect 12 0 13 0;
+#X connect 13 0 1 0;
+#X connect 14 0 19 0;
+#X connect 15 0 19 0;
+#X connect 16 0 5 0;
+#X connect 17 0 10 0;
+#X connect 19 0 3 0;
+#X connect 20 0 4 0;
+#X connect 21 0 2 0;

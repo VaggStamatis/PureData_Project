@@ -1,8 +1,7 @@
-#N canvas 0 -8 800 1113 12;
+#N canvas 1629 -8 800 1113 12;
 #X obj 49 52 noise~;
-#X obj 75 208 *~ 0.5;
-#X obj 282 323 dac~;
-#X floatatom 116 50 5 0 0 0 - - - 0;
+#X obj 74 290 dac~;
+#X floatatom 116 52 5 0 0 0 - - - 0;
 #X text 15 361 Δημιουργούμε ένα θόρυβο με το
 αντικείμενο noise~ για να τον ακούσουμε
 τον περνάμε από μια μειώση ήχου (*~ 0.5)
@@ -29,30 +28,31 @@ band pass filter. Είναι ένα αντικείμενο που αφήνει
 τα κατώφλια και έναν αριθμό που ονομάζεται
 Quality (Q) factor.;
 #X obj 456 662 bp~ 220 1;
-#X obj 86 133 bp~ 220 1;
 #X floatatom 177 49 6 0 0 0 - - - 0;
 #X obj 258 54 noise~;
-#X obj 284 210 *~ 0.5;
+#X obj 286 210 *~ 0.5;
 #X floatatom 334 56 7 0 0 0 - - - 0;
 #X obj 449 456 lop~;
 #X obj 286 146 lop~;
 #X obj 436 55 noise~;
-#X obj 462 211 *~ 0.5;
-#X floatatom 516 56 6 0 0 0 - - - 0;
+#X obj 474 213 *~ 0.5;
+#X floatatom 510 55 6 0 0 0 - - - 0;
 #X obj 474 148 hip~;
 #X text 19 746 Παίζοντας με τις τιμές εισόδου
 στα διάφορα φίλτρα μπορούμε να δούμε
 πως ελλάζει ο θόρυβος ανάλογα το φίλτρο
 και τις παραμέτρους του.;
-#X connect 0 0 10 0;
-#X connect 1 0 2 0;
-#X connect 1 0 2 1;
-#X connect 3 0 10 1;
-#X connect 10 0 1 0;
-#X connect 11 0 10 2;
-#X connect 12 0 16 0;
-#X connect 14 0 16 1;
-#X connect 16 0 13 0;
-#X connect 17 0 20 0;
-#X connect 19 0 20 1;
-#X connect 20 0 18 0;
+#X obj 75 208 *~ 0.01;
+#X obj 86 134 bp~ 440 4;
+#X connect 0 0 21 0;
+#X connect 2 0 21 1;
+#X connect 9 0 21 2;
+#X connect 10 0 14 0;
+#X connect 12 0 14 1;
+#X connect 14 0 11 0;
+#X connect 15 0 18 0;
+#X connect 17 0 18 1;
+#X connect 18 0 16 0;
+#X connect 20 0 1 0;
+#X connect 20 0 1 1;
+#X connect 21 0 20 0;
